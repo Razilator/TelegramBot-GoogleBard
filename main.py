@@ -15,7 +15,7 @@ dp = Dispatcher(bot)
 chatbot = Chatbot(session_id=bard_token)
 
 # For the bot to work, you need a US proxy or VPN
-proxy = env.str('PROXY')
+proxy = env.str('PROXY', None)
 chatbot.session.proxies.update({"http": proxy, "https": proxy})
 
 
