@@ -23,4 +23,18 @@ We get the key to access **API**, it is shaded in the screenshot.
 
 - In the console, enter `py main.py`, and use it for our own purposes.
 
-Article with images on [my site](https://proghunter.ru/articles/python-bot-powered-by-google-bard-neural-network-for-telegram)
+## Dialog with a bot
+
+![Dialog screenshot 1](https://proghunter.ru/media/images/uploads/2023/05/14/256ffa2248-uploaded-image.png) 
+
+![Dialog screenshot 2](https://proghunter.ru/media/images/uploads/2023/05/14/7709de8995-uploaded-image.png) 
+
+Full article with images on my [website](https://proghunter.ru/articles/python-bot-powered-by-google-bard-neural-network-for-telegram)
+
+## Proxy 
+
+Without using a proxy, you may encounter the following error:
+
+```
+Google Bard encountered an error: b')]}\'\n\n38\n["wrb.fr",null,null,null,null,[9]]\n56\n["di",196," af.httprm",196,"5929433453807571131",4]\n25\n["e",4,null,null,131]\n'.
+```
