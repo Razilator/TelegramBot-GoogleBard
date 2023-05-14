@@ -1,5 +1,5 @@
 # TelegramBot-GoogleBard
-This is a simple bot that uses the Google Bard neural network as a response generator. Powered by the aiogram library in Pothong language.
+This is a simple bot that uses the Google Bard neural network as a response generator. Powered by the aiogram library in Python language.
 ## Installing dependencies
 Create a virtual environment, install the required dependencies with `pip install -r requirements.txt`
 
