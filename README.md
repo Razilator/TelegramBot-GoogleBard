@@ -7,9 +7,9 @@ Create a virtual environment, install the required dependencies with `pip instal
 Go to https://bard.google.com/
 - F12 for console
 - Copy the values
-- - Session: Go to Application → Cookies → __Secure-1PSID. Copy the value of that cookie.
+- - Session: Go to Application → Cookies → `__Secure-1PSID` and `__Secure-1PSIDTS`. Copy the value of that cookie.
 
-![Application -> Cookies -> https://bard.google.com/ -> __Secure-1PSID](https://proghunter.ru/media/images/uploads/2023/05/14/568cbb5eca-uploaded-image.png) 
+![Application -> Cookies -> https://bard.google.com/ -> __Secure-1PSID and __Secure-1PSIDTS](https://proghunter.ru/media/images/uploads/2023/05/14/568cbb5eca-uploaded-image.png) 
 
 ## Telegram Bot token
 
@@ -31,9 +31,9 @@ We get the key to access **API**, it is shaded in the screenshot.
 
 Full article with images on my [website](https://proghunter.ru/articles/python-bot-powered-by-google-bard-neural-network-for-telegram)
 
-## Proxy 
+## Proxy or VPN
 
-Without using a proxy, you may encounter the following error:
+Without using a proxy/vpn, you may encounter the following error:
 
 ```
 Google Bard encountered an error: b')]}\'\n\n38\n["wrb.fr",null,null,null,null,[9]]\n56\n["di",196," af.httprm",196,"5929433453807571131",4]\n25\n["e",4,null,null,131]\n'.

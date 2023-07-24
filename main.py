@@ -1,4 +1,4 @@
-from Bard import Chatbot
+from Bard import AsyncChatbot
 from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
@@ -7,26 +7,22 @@ from environs import Env
 env = Env()
 env.read_env()
 
-telegram_token = env.str('TELEGRAM_TOKEN')
-bard_token = env.str('BARD_SESSION')
+secure_1PSID = env('SECURE_1PSID')
+secure_1PSIDTS = env('SECURE_1PSIDTS')
+telegram_token = env('TELEGRAM_TOKEN')
 
 bot = Bot(token=telegram_token)
 dp = Dispatcher(bot)
-chatbot = Chatbot(session_id=bard_token)
-
-# For the bot to work, you need a US proxy or VPN
-proxy = env.str('PROXY', None)
-if proxy:
-    chatbot.session.proxies.update({"http": proxy, "https": proxy})
 
 
 @dp.message_handler()
 async def send(message: types.Message):
     try:
-        await message.answer('Google Bard writes...')
+        chatbot = await AsyncChatbot.create(secure_1PSID, secure_1PSIDTS)  # it's sad that initialization happens every time a message is sent, I'll probably fix it sometime.
+        await message.answer('Google Bard начинает думать...')
         await message.answer_chat_action('typing')
-        response = chatbot.ask(message.text)
-        await message.answer(response.get('content'), parse_mode="markdown")
+        answer = await chatbot.ask(message.text)
+        await message.answer(answer.get('content'), parse_mode="markdown")
     except Exception as ex:
         await message.answer(str(ex))
 
